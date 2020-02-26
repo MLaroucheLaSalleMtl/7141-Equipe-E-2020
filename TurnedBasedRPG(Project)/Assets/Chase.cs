@@ -20,10 +20,10 @@ public class Chase : MonoBehaviour
     {
         if(Vector3.Distance(player.position, this.transform.position)<10)
         {
-            Vector3 direction = player.position - this.transform.position;
+           // Vector3 direction = player.position - this.transform.position;
 
-            this.transform.position = Quaternion.Slerp(this.transform.rotation,
-                                           Quaternion.LookRotation(direction), 0.1f);
+           // this.transform.position = Quaternion.Slerp(this.transform.rotation,
+                                          // Quaternion.LookRotation(direction), 0.1f);
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = goal.position;
         }
